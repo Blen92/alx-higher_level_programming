@@ -1,4 +1,8 @@
 #!/usr/bin/node
+// script that concats 2 files.
 
-const cmd = `cat ${process.argv[2]} ${process.argv[3]} > ${process.argv[4]}`;
-require('child_process').execSync(cmd).toString('UTF-8');
+const args = process.argv.slice(2);
+const fs = require('fs');
+const first = fs.readFileSync('./' + args[0]);
+const second = fs.readFileSync('./' + args[1]);
+fs.writeFileSync('./' + args[2], first + second);

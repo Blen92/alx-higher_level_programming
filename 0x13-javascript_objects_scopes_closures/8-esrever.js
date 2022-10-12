@@ -1,7 +1,11 @@
 #!/usr/bin/node
+// function that returns the reversed version of a list
 
 exports.esrever = function (list) {
-  return list.reduceRight(function (arr, last) {
-    return (arr = arr.concat(last));
-  }, []);
+
+  let rlist = [];
+  while (list.length > 0) {
+    rlist.push(list.pop());
+  }
+  return rlist;
 };

@@ -1,20 +1,14 @@
 #!/usr/bin/node
+let num = process.argv[2];
 
-/**
- * a script that prints a square
- */
-const inputSize = parseInt(process.argv[2]);
-let squareIndicator = '';
-
-if (process.argv.length < 3 || isNaN(inputSize)) {
+if (isNaN(num)) {
   console.log('Missing size');
-}
-for (let i = 0; i < inputSize; i++) {
-  for (let j = 0; j < inputSize; j++) {
-    squareIndicator += 'X';
+} else {
+  for (let i = 0; i < num; i++) {
+    let msg = '';
+    for (let j = 0; j < num; j++) {
+      msg = msg + 'X';
+    }
+    console.log(msg);
   }
-  if (i !== inputSize - 1) {
-    squareIndicator += '\n';
-  }
 }
-console.log(squareIndicator);

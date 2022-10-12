@@ -1,1 +1,2 @@
-# Higher Level Programming and Algorithms
+# alx-higher_level_programming
+Higher level programming language
